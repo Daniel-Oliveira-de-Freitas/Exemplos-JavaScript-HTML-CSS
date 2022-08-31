@@ -1,0 +1,33 @@
+h1{
+    color: red;
+    text-align: center;
+    text-shadow: 0px 0px 10px black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+
+body{
+    background-color: cornflowerblue;
+}
+nav{
+    background-color: blanchedalmond;
+    color: #FFFFFF;
+    text-align: right;
+    height: 50px;
+    
+    
+}
+a{
+    margin-right: 5%;
+    color: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    text-shadow: 0px 0px 10px black;
+    
+    
+}
+
+
+a:hover{
+    color: red;
+}
