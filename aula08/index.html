@@ -1,65 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Calculadora e Conversor</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
 
-<body>
+  <body>
     <h1>Calculadora e Conversor de Temperatura</h1>
-    <form >
-        <h2>Calculadora JavaScript</h2>
-        <label for="num1">Numero 1:</label>
-        <input type="number" name="num1" id="num1" placeholder="Digite o numero 1">
-        <label for="num2">Numero 2:</label>
-        <input type="number" name="num2" id="num2" placeholder="Digite o numero 2">
-        <br>
-        <img src="calc.jpg" alt="">
-        <br>
-        <label for="funcao">Função:</label>
-        <select name="opcao" id="opcao">
-            <option value="soma">Soma</option>
-            <option value="subtracao">Subtração</option>
-            <option value="multiplicacao">Multiplicação</option>
-            <option value="divisao">Divisão</option>
-        </select>
-        <br>
-        <br>
-        <input type="button" value="Calcular" onclick="funcoes()">
-        <br>
-        <h3 id="texto" name="texto">resultado </h3><h3> = </h3> <h3 id="resultado" name="resultado">{} </h3>
-        <br>
-    </form>
-    <br>
-    <br>
     <form>
-        <h2> Conversor de Temperatura JavaScript</h2>
-        <label for="vtemp">Digite a temperatura:</label>
-        <input type="number" name="vTemp" id="vTemp" placeholder="que quer converter">
-        
-        <br>
-        <img src="tmpFC.jpg" alt="">
-        <br>
-        <label for="conversao">conversão para temperatura:</label>
-        <select name="escolha" id="escolha">
-            <option value="celsius">Celsius</option>
-            <option value="fahrenheit">Fahrenheit</option>
-            
-        </select>
-        <br>
-        <br>
-        <input type="button" value="Calcular" onclick="escolheTemperatura()">
-        <br>
-        <h3 id="texto" name="texto">resultado </h3><h3> = </h3> <h3 id="resultadoTemp" name="resultadoTemp">{} </h3>
-        <br>
+      <h2>Calculadora JavaScript</h2>
+      <label for="num1">Numero 1:</label>
+      <input
+        type="number"
+        name="num1"
+        id="num1"
+        placeholder="Digite o numero 1"
+      />
+      <label for="num2">Numero 2:</label>
+      <input
+        type="number"
+        name="num2"
+        id="num2"
+        placeholder="Digite o numero 2"
+      />
+      <br />
+      <img src="calc.jpg" alt="" />
+      <br />
+      <label for="funcao">Função:</label>
+      <select name="opcao" id="opcao">
+        <option value="soma">Soma</option>
+        <option value="subtracao">Subtração</option>
+        <option value="multiplicacao">Multiplicação</option>
+        <option value="divisao">Divisão</option>
+      </select>
+      <br />
+      <br />
+      <input type="button" value="Calcular" onclick="funcoes()" />
+      <br />
+      <h3 id="texto" name="texto">resultado</h3>
+      <h3>=</h3>
+      <h3 id="resultado" name="resultado">{}</h3>
+      <br />
     </form>
-    <br>
-   <footer>Todos os direitos reservados - 2022 &copy; Daniel Oliveira de Freitas</footer>
-</body>
+    <br />
+    <br />
+    <form>
+      <h2>Conversor de Temperatura JavaScript</h2>
+      <label for="vtemp">Digite a temperatura:</label>
+      <input
+        type="number"
+        name="vTemp"
+        id="vTemp"
+        placeholder="que quer converter"
+      />
 
+      <br />
+      <img src="tmpFC.jpg" alt="" />
+      <br />
+      <label for="conversao">conversão para temperatura:</label>
+      <select name="escolha" id="escolha">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+      </select>
+      <br />
+      <br />
+      <input type="button" value="Calcular" onclick="escolheTemperatura()" />
+      <br />
+      <h3 id="texto" name="texto">resultado</h3>
+      <h3>=</h3>
+      <h3 id="resultadoTemp" name="resultadoTemp">{}</h3>
+      <br />
+    </form>
+    <br />
+    <footer>
+      Todos os direitos reservados - 2022 &copy; Daniel Oliveira de Freitas
+    </footer>
+  </body>
 </html>

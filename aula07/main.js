@@ -5,4 +5,3 @@ nomeCompleto = nome + " " + sobrenome;
 console.log(nomeCompleto);
 document.write(nomeCompleto);
 document.getElementsByClassName("nome").innerHTML = nomeCompleto;
-

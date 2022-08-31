@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Calculadora {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
         Calcula calc = new Calcula();
         Scanner tec = new Scanner(System.in);
         int n1, n2, result = 0, op;
-        String operacao= "", sinal = "";
+        String operacao = "", sinal = "";
         do {
             System.out.println("           Calculadora");
             System.out.println("Escolha a operação que deseja fazer");
@@ -19,15 +19,11 @@ public class Calculadora {
             System.out.println("[0] Para sair");
             System.out.println("Digite sua opção");
             op = tec.nextInt();
-            
             System.out.println("digite 1º numero:");
             n1 = tec.nextInt();
-
             System.out.println("Calculadora");
             System.out.println("digite 2º numero:");
             n2 = tec.nextInt();
-
-
 
             switch (op) {
 
@@ -55,12 +51,12 @@ public class Calculadora {
             } else if (op == 3) {
                 operacao = "multiplicação";
                 sinal = "*";
-            } else if (op == 4){
+            } else if (op == 4) {
                 operacao = "divisão";
                 sinal = "/";
             }
 
-            System.out.println("O resultado da "+ operacao +  " : " + n1 +" "+ sinal +" "+ n2 + " = " + result);
+            System.out.println("O resultado da " + operacao + " : " + n1 + " " + sinal + " " + n2 + " = " + result);
 
         } while (op != 0);
 

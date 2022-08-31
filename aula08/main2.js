@@ -7,6 +7,7 @@ document.getElementById("texto").innerHTML = soma(1, 2);
 function paraCelsius(valorFarhenheit) {
     return (valorFarhenheit - 32) / 1.8;
 }
+
 function paraFahrenheit(valorCelsius) {
     return (valorCelsius * 1.8) + 32;
 }
