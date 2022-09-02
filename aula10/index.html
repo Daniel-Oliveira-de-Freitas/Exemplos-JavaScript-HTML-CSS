@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+    <h2>Eventos JavaScript</h2>
+    <p id="texto"></p>
+    <div class="container">
+        <button onclick="eventoClick();"
+        onmouseout="eventoSaideCima();" 
+        onmouseover="eventoEmCima();"
+        ondblclick="doisClick();"
+        >clique aqui</button>
+    </div>
+        
+    <br><br>
+    <div 
+    id="cont" 
+    class="cont" 
+    onmouseover="viraBlue();" 
+    onmouseout="viraWith();"
+    onmousemove="adicionaTexto();" 
+    ></div>
+    <script src="main.js"></script>
+</body>
+</html>
