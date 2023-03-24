@@ -7,6 +7,9 @@ const postPage = document.querySelector("#post");
 const postContainer = document.querySelector("#post-container");
 const commentsContainer = document.querySelector("#comments-container");
 
+const commentForm = document.querySelector("#comment-form");
+const emailInput = document.querySelector("#email");
+const bodyInput = document.querySelector("#body");
 
 
 //get id from URL
@@ -44,11 +47,76 @@ async function getAllPosts() {
 }
 
 async function getPost(id) {
+    const [responsePost, responseComments] = await Promise.all([
+        fetch(`${url}/${id}`),
+        fetch(`${url}/${id}/comments`)
+    ])
 
+    const dataPost = await responsePost.json();
+
+    const dataComments = await responseComments.json();
+
+    loadingElement.classList.add("hide");
+    postPage.classList.remove("hide")
+
+    const title = document.createElement("h1");
+    const body = document.createElement("p");
+
+    title.innerText = dataPost.title;
+    body.innerText = dataPost.body;
+
+    postContainer.appendChild(title);
+    postContainer.appendChild(body);
+
+    dataComments.map((comment) => {
+        createComment(comment);
+    });
+}
+
+function createComment(comment) {
+    const div = document.createElement("div");
+    const email = document.createElement("h3");
+    const commentBody = document.createElement("p");
+
+    email.innerText = comment.email;
+    commentBody.innerText = comment.body;
+
+
+    div.appendChild(email);
+    div.appendChild(commentBody);
+    commentsContainer.appendChild(div);
+}
+
+//criate comment
+async function postComment(comment) {
+    const response = await fetch(`${url}/${postId}/comments`,{
+        method: "POST",
+        body: comment,
+        headers: {
+            "Content-Type": "application/json",
+        }
+    });
+
+    const data = await response.json();
+    createComment(data);
 }
 
 if (!postId) {
     getAllPosts();
 }else {
-    console.log(postId);
+    getPost(postId);
+
+    // Add comments to post
+    commentForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        let comment = {
+            email: emailInput.value,
+            body: bodyInput.value,
+        };
+        comment = JSON.stringify(comment);
+
+        postComment(comment);
+
+    });
 }
